@@ -31,7 +31,11 @@ namespace Lab_3_Permission_Management
             /**
              * Look at tasks description in lab3.1 and complete the remaining tasks
              */
-            
+
+            managerUser.multiplyPermission(Permission.read, Permission.write);
+            managerUser.addPermission(Permission.execute);
+
+            seniorUser.multiplyPermission(Permission.read, Permission.write);
             
 
 
