@@ -12,7 +12,7 @@ namespace Lab_3_Permission_Management
         {
             // Add 4 users with none permissions (Admin, operator, manager,senior)
             User operatorUser = new User("operator");
-            User SeniorUser = new User("senior");
+            User seniorUser = new User("senior");
             User managerUser = new User("manager");
             User adminUser = new User("admin");
             /**
@@ -36,6 +36,12 @@ namespace Lab_3_Permission_Management
             managerUser.addPermission(Permission.execute);
 
             seniorUser.multiplyPermission(Permission.read, Permission.write);
+
+            adminUser.addPermission(Permission.read);
+            adminUser.addPermission(Permission.write);
+            adminUser.addPermission(Permission.execute);
+
+            seniorUser.removePermission(Permission.write);
             
 
 
