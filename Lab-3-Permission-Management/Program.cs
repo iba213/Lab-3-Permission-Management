@@ -38,11 +38,11 @@ namespace Lab_3_Permission_Management
 
             adminUser.AddPermission(Permissions.Read | Permissions.Write | Permissions.Execute);
 
-            seniorUser.removePermission(Permissions.Write);
+            seniorUser.RemovePermission(Permissions.Write);
 
             Console.WriteLine($"Senior has Write Permission? {seniorUser.HasPermission(Permissions.Write)}");
             Console.WriteLine($"Manager has Execution Permission? {managerUser.HasPermission(Permissions.Execute)}");
-            Console.WriteLine($"Admin has full Permission? {adminUser.HasPermission(Permissions.Read | Permissions.Write | Permissions.Execute}");
+            Console.WriteLine($"Admin has full Permission? {adminUser.HasPermission(Permissions.Read | Permissions.Write | Permissions.Execute)}");
 
 
         }
