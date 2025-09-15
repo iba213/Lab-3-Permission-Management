@@ -32,17 +32,17 @@ namespace Lab_3_Permission_Management
              * Look at tasks description in lab3.1 and complete the remaining tasks
              */
 
-            managerUser.multiplyPermission(Permission.read, Permission.write);
-            managerUser.addPermission(Permission.execute);
+            managerUser.AddPermission(Permissions.Read | Permissions.Write | Permissions.Execute);
 
-            seniorUser.multiplyPermission(Permission.read, Permission.write);
+            seniorUser.multiplyPermission(Permissions.Read, Permissions.Write);
 
-            adminUser.addPermission(Permission.read);
-            adminUser.addPermission(Permission.write);
-            adminUser.addPermission(Permission.execute);
+            adminUser.AddPermission(Permissions.Read | Permissions.Write | Permissions.Execute);
 
-            seniorUser.removePermission(Permission.write);
-            
+            seniorUser.removePermission(Permissions.Write);
+
+            Console.WriteLine($"Senior has Write Permission? {seniorUser.HasPermission(Permissions.Write)}");
+            Console.WriteLine($"Manager has Execution Permission? {managerUser.HasPermission(Permissions.Execute)}");
+            Console.WriteLine($"Admin has full Permission? {adminUser.HasPermission(Permissions.Read | Permissions.Write | Permissions.Execute}");
 
 
         }
